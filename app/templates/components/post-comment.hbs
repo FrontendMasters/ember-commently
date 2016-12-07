@@ -1,0 +1,13 @@
+<p class='comment-body'>
+  {{model.body}}
+</p>
+
+<span class="delete-indicator"
+      onClick={{this.attrs.delete-comment}}>
+</span>
+
+{{#if model.updatedAt}}
+  <span class="posted-at">
+    {{moment-from-now model.updatedAt}}
+  </span>
+{{/if}}

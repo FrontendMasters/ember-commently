@@ -1,0 +1,55 @@
+<div class="title-row">
+  <img src={{model.authorPhotoUrl}} alt={{authorName}} class="author-portrait">
+  <h1 class='post-title'>{{titleize model.title}}</h1>
+  
+  <div class="metadata-row">
+    <div class="metadata-item author">
+      <span class="metadata-item-label">By</span>
+      <span class="metadata-item-value">{{model.authorName}}</span>
+    </div>
+    <div class="metadata-item created-at">
+      <span class="metadata-item-label">Written At</span>
+      <span class="metadata-item-value">{{moment-format model.createdAt "LLL"}}</span>
+    </div>
+    {{#unless (eq model.createdAt model.updatedAt)}}
+    <div class="metadata-item updated-at">
+      <span class="metadata-item-label">Updated At</span>
+      <span class="metadata-item-value">{{moment-format model.updatedAt "LLL"}}</span>
+    </div>
+    {{/unless}}
+    {{#if model.categoryName}}
+    <div class="metadata-item">
+      <span class="metadata-item-label">Category</span>
+      <span class="metadata-item-value">{{model.categoryName}}</span>
+    </div>  
+    {{/if}}
+  </div>
+
+</div>
+
+
+{{#if model.featuredImageUrl}}
+<div class="feature-image-row">
+  <img src={{model.featuredImageUrl}} alt="" class="feature-image">
+</div>
+{{/if}}
+
+<p class="body">
+  {{markdown-to-html model.body}}
+</p>
+
+<hr>
+
+{{#each model.comments as |comment|}}
+  {{post-comment
+    model=comment}}
+{{else}}
+  <p class="no-comments">
+    No comments yet
+  </p>
+{{/each}}
+{{textarea value=postInfo.body class='reply-field'}}
+
+<div class="post-actions">
+  <button>Reply</button>
+</div>

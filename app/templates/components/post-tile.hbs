@@ -1,0 +1,20 @@
+{{#link-to "posts.show" model.id}}
+  <div class="author-image">
+    <img src={{model.authorPhotoUrl}} alt="">
+  </div>
+  <div class="post-tile-content">
+      <span class="comment-count">
+        {{model.comments.length}}
+      </span>
+      <h3>{{model.title}}</h3>
+    <span class="author-name">
+      {{model.authorName}}
+    </span>
+    <span class="created-at pull-right">
+      {{moment-format model.createdAt "LL"}}
+    </span>
+    <div class="post-tease">
+      {{tease model.body chars=80}}...
+    </div>
+  </div>
+{{/link-to}}
