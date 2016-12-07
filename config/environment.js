@@ -16,6 +16,9 @@ module.exports = function(environment) {
                 Date: false
             }
         },
+        fastboot: {
+            hostWhitelist: [/\.herokuapp.com$/, /^localhost:\d+$/]
+        },
         DS: {
             host: 'https://mike-demo-blog-api.herokuapp.com'
         },
