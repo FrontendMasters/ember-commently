@@ -1,0 +1,21 @@
+<label>{{label}}</label>
+<input
+  type={{type}}
+  class="form-control"
+  placeholder={{label}}
+  value={{value}}
+  id={{id}}
+  readonly={{readonly}}
+  disabled={{disabled}}
+  onclick={{action '_onclick'}}
+  onInput={{action '_oninput'}}>
+{{#if icon}}
+<span class="input-icon">
+  <i class={{icon}}></i>
+</span>
+{{/if}}
+{{#if (and value.length errors.length)}}
+  {{#each errors as |e|}}
+    <span class="help-block">{{e}}</span>
+  {{/each}}
+{{/if}}

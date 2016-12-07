@@ -1,0 +1,14 @@
+<label>{{label}}</label>
+<textarea class="form-control"
+  value={{value}}
+  disabled={{disabled}}
+  readonly={{readonly}}
+  placeholder={{label}}
+  onInput={{action "_oninput"}}
+  onClick={{action "_onclick"}}>
+</textarea>
+{{#if (and value.length errors.length)}}
+  {{#each errors as |e|}}
+    <span class="help-block">{{e}}</span>
+  {{/each}}
+{{/if}}

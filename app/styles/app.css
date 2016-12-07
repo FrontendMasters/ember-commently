@@ -1,3 +1,4 @@
+@import "_grid.css";
 html,
 body {
     padding: 0;
@@ -17,13 +18,13 @@ body {
     color: white;
     height: 100%;
     position: fixed;
-    top: 0;
+    top: 54px;
     border-right: 1px solid #bbb;
 }
 
 .posts-index .posts-right {
     position: absolute;
-    top: 0;
+    top: 54px;
     bottom: 0;
 }
 
@@ -105,18 +106,17 @@ body {
 }
 
 .post-tile .created-at {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #999;
 }
 
 .post-tile .author-name {
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     color: #000;
 }
 
 .post-tile .post-tease {
     color: #999;
-    font-size: 0.8rem;
 }
 
 .post-tile a {
@@ -147,7 +147,6 @@ body {
 
 .post-tile .draft-indicator {
     color: #fff;
-    font-size: 0.75rem;
     background: #900;
     padding: 2px 4px;
     border-radius: 3px;
@@ -205,10 +204,10 @@ body {
 }
 
 .post-full .metadata-row {
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     margin-left: 110px;
     margin-bottom: 20px;
-    height: 40px;
+    height: 60px;
     transition: all 0.3s;
 }
 
@@ -287,4 +286,42 @@ body {
     right: 4px;
     text-align: right;
     width: 300px;
+}
+
+
+/* btn */
+
+a.btn {
+    text-decoration: none;
+    color: darkblue;
+    background: white;
+    padding: 5px 12px;
+    display: inline-block;
+    border-radius: 2px;
+}
+
+a.btn:hover {
+    background: #ffa;
+    color: blue;
+}
+
+
+/* NAVBAR */
+
+nav.navbar {
+    display: block;
+    height: 54px;
+    background: #66e;
+    color: white;
+    padding: 12px;
+}
+
+nav.navbar .brand {
+    text-decoration: none;
+    color: white;
+    font-size: 2.3rem;
+}
+
+hr {
+    border-bottom: none;
 }
