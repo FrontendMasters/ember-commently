@@ -20,7 +20,8 @@ module.exports = function(environment) {
             hostWhitelist: [/\.herokuapp.com$/, /^localhost:\d+$/]
         },
         DS: {
-            host: 'https://mike-demo-blog-api.herokuapp.com'
+            namespace: 'api',
+            host: 'https://commently-api-stage.herokuapp.com'
         },
         APP: {
             // Here you can pass flags/options to your application instance
@@ -29,6 +30,7 @@ module.exports = function(environment) {
     };
 
     if (environment === 'development') {
+        // ENV.DS.host = 'http://localhost:4000';
         // ENV.APP.LOG_RESOLVER = true;
         // ENV.APP.LOG_ACTIVE_GENERATION = true;
         // ENV.APP.LOG_TRANSITIONS = true;
@@ -48,7 +50,7 @@ module.exports = function(environment) {
     }
 
     if (environment === 'production') {
-
+        ENV.DS.host = 'https://commently-api.herokuapp.com';
     }
 
     return ENV;

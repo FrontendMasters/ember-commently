@@ -5,19 +5,26 @@
   <hr>
   {{x-input
       label='Email'
+      type="email"
+      value=model.email
       classNames='col-xs-12'}}
   {{x-input
       label='Password'
       type="password"
+      value=model.password
       classNames='col-xs-12'}}
   {{x-input
       label='Confirm Password'
       type="password"
+      value=model.passwordConfirmation
       classNames='col-xs-12'}}
 </div>
 <div class="row">
   <div class="col-xs-12">
-    <button class="btn btn-primary">Register</button>
+    <button class="btn btn-primary"
+      onclick={{route-action 'register'}}>
+      Register
+    </button>
     <div class="pull-right">
       {{link-to 'Login' 'auth.login'}}
     </div>

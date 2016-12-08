@@ -6,6 +6,10 @@ body {
     font-family: sans-serif;
 }
 
+body {
+    padding-top: 70px;
+}
+
 .pull-right {
     float: right;
 }
@@ -242,7 +246,6 @@ body {
 .post-full .reply-field {
     width: 100%;
     min-height: 40px;
-    border: 1px solid #ddd;
 }
 
 .post-full .metadata-row .metadata-item-value {
@@ -314,12 +317,17 @@ nav.navbar {
     background: #66e;
     color: white;
     padding: 12px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 nav.navbar .brand {
     text-decoration: none;
     color: white;
     font-size: 2.3rem;
+    top: 0;
 }
 
 hr {
