@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
-const { Route } = Ember;
+const { Route, inject } = Ember;
 
 export default Route.extend({
+    session: inject.service(),
     actions: {
-        login({ email /*, password*/ }) {
-            alert(`Attempted Login: ${email}`);
+        login(email, password) {
+            this.get('session').authenticate('authenticator:oauth2', email, password);
         }
     },
     model() {

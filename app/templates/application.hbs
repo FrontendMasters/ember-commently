@@ -1,8 +1,13 @@
 <nav class="navbar">
   {{link-to 'Comment.ly' 'posts.index' classNames='brand'}}
 
-  <div class="pull-right">
-    {{link-to 'Login' 'auth.login' class='btn'}}
-  </div>
+  
+    <div class="pull-right">
+      {{#unless (is-authenticated)}}
+        {{link-to 'Login' 'auth.login' class='btn'}}
+      {{else}}
+        <button class="btn" onclick={{route-action 'logout'}}>Logout</button>
+      {{/unless}}
+    </div>
 </nav>
 {{outlet}}
