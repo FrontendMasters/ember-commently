@@ -26,6 +26,6 @@
         "name": "Attach to Process",
         "type": "node2",
         "request": "attach",
-        "port": 9229
+        "port": 5858
     }]
 }
