@@ -1,4 +1,4 @@
-export function initialize(app) {
+export function initialize( /*app*/ ) {
     // if (typeof FastBoot === 'undefined' && navigator.geolocation) {
     //     const geo = navigator.geolocation;
     //     app.deferReadiness();
