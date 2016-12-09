@@ -16,7 +16,9 @@ export default Route.extend(ApplicationRouteMixin, {
     beforeModel() {
         this._super(...arguments);
         console.log(math, PI);
-        return this.get('currentUser').loadUserInfo();
+        if (this.get('session.isAuthenticated')) {
+            return this.get('currentUser').loadUserInfo();
+        }
     },
     setupController(controller) {
         this._super(...arguments);
