@@ -7,6 +7,7 @@ const { Route, inject, getOwner } = Ember;
 
 export default Route.extend(ApplicationRouteMixin, {
     session: inject.service(),
+    currentUser: inject.service(),
     actions: {
         logout() {
             this.get('session').invalidate();
@@ -15,6 +16,7 @@ export default Route.extend(ApplicationRouteMixin, {
     beforeModel() {
         this._super(...arguments);
         console.log(math, PI);
+        return this.get('currentUser').loadUserInfo();
     },
     setupController(controller) {
         this._super(...arguments);
