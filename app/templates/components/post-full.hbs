@@ -2,7 +2,9 @@
   <img src={{model.authorPhotoUrl}} alt={{authorName}} class="author-portrait">
   <h1 class='post-title'>{{titleize model.title}}</h1>
   
-  <div class="metadata-row">
+  {{#if postInfo.isExpanded}}
+  <div class="metadata-row"
+    onClick={{action (toggle 'postInfo.isExpanded' this)}}>
     <div class="metadata-item author">
       <span class="metadata-item-label">By</span>
       <span class="metadata-item-value">{{model.authorName}}</span>
@@ -24,7 +26,9 @@
     </div>  
     {{/if}}
   </div>
-
+  {{else}}
+    <span class='expand-metadata' onClick={{action (toggle 'postInfo.isExpanded' this)}}>details...</span>
+  {{/if}}
 </div>
 
 

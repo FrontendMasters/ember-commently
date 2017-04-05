@@ -20,5 +20,8 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{post-full model=model saveComment=(action 'go')}}`);
   let innerText = this.$().text().replace(/\s+/g, '');
-  assert.ok(innerText.indexOf('WrittenAt') >= 0, 'Written At is present');
+  assert.ok(innerText.indexOf('details...') >= 0, 'Written At is initially not present');
+  this.$('.expand-metadata').click();
+  innerText = this.$().text().replace(/\s+/g, '');
+  assert.ok(innerText.indexOf('WrittenAt') >= 0, 'Written At is present after expanding metadata');
 });
