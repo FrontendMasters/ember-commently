@@ -42,7 +42,8 @@
 
 {{#each model.comments as |comment|}}
   {{post-comment
-    model=comment}}
+    model=comment
+    delete-comment=(action 'deleteComment' comment) }}
 {{else}}
   <p class="no-comments">
     No comments yet
@@ -51,5 +52,8 @@
 {{x-textarea value=postInfo.draftComment class='reply-field'}}
 
 <div class="post-actions">
-  <button class='btn'>Reply</button>
+  <button class='btn'
+    onclick={{action this.attrs.saveComment model postInfo.draftComment}}>
+    Reply
+  </button>
 </div>

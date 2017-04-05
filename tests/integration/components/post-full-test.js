@@ -16,7 +16,9 @@ test('it renders', function(assert) {
     updatedAt: '2016-12-07T23:48:13.678Z'
   });
 
-  this.render(hbs`{{post-full model=model}}`);
+  this.on('go', function() {});
+
+  this.render(hbs`{{post-full model=model saveComment=(action 'go')}}`);
   let innerText = this.$().text().replace(/\s+/g, '');
   assert.ok(innerText.indexOf('WrittenAt') >= 0, 'Written At is present');
 });
