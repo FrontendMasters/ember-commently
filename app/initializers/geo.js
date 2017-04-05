@@ -1,4 +1,4 @@
-export function initialize(app) {
+export function initialize(/* app */) {
   // if (typeof FastBoot === 'undefined') {
   //   let geo = navigator.geolocation;
   //   if (geo) { // Skip this part for PhantomJS

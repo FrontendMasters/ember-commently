@@ -2,6 +2,7 @@
   {{link-to 'Comment.ly' 'posts.index' classNames='brand'}}
     <div class="pull-right">
       {{currentUser.email}}
+      {{req.userAgent}}
       {{#unless (is-authenticated)}}
         {{link-to 'Login' 'auth.login' class='btn'}}
       {{else}}

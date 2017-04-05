@@ -22,6 +22,8 @@ export default Route.extend(ApplicationRouteMixin, {
   setupController(controller) {
     this._super(...arguments);
     let locObj = getOwner(this).lookup('data:location');
+    let reqObj = getOwner(this).lookup('data:request');
     controller.set('loc', locObj);
+    controller.set('req', reqObj);
   }
 });
