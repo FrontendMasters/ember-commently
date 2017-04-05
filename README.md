@@ -1,4 +1,4 @@
-# Commently
+# Commently [![Build Status](https://travis-ci.org/FrontendMasters/ember-commently.svg?branch=master)](https://travis-ci.org/FrontendMasters/ember-commently)
 
 * The `start` branch represents the starting point for the course.
 * The `master` branch represents the state of the project after all exercises are completed.
