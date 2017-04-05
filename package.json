@@ -66,6 +66,7 @@
   "private": true,
   "ember-addon": {
     "paths": [
+      "lib/commenter",
       "lib/core-ui"
     ]
   }
