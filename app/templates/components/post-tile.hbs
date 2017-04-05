@@ -7,6 +7,9 @@
         {{model.comments.length}}
       </span>
       <h3>{{model.title}}</h3>
+      {{#if postInfo.draftComment}}
+        <span class="draft-indicator">DRAFT</span>
+      {{/if}}
     <span class="author-name">
       {{model.authorName}}
     </span>
