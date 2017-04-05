@@ -1,7 +1,8 @@
-# commently
+# Commently
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+* The `start` branch represents the starting point for the course.
+* The `master` branch represents the state of the project after all exercises are completed.
+* There are several git tags representing the state of the project after exercises are completed.
 
 ## Prerequisites
 

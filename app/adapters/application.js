@@ -6,7 +6,7 @@ const { JSONAPIAdapter } = DS;
 const { host, namespace } = config.DS;
 
 export default JSONAPIAdapter.extend(DataAdapterMixin, {
-    authorizer: 'authorizer:oauth2',
-    host,
-    namespace
+  authorizer: 'authorizer:oauth2',
+  host,
+  namespace
 });

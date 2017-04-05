@@ -3,5 +3,5 @@ import Ember from 'ember';
 const { Component } = Ember;
 
 export default Component.extend({
-    classNames: ['post-tile']
+  classNames: ['post-tile']
 });

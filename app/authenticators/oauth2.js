@@ -4,5 +4,5 @@ import config from '../config/environment';
 const { host, namespace } = config.DS;
 
 export default OAuth2PasswordGrant.extend({
-    serverTokenEndpoint: `${host}/${namespace}/sessions`
+  serverTokenEndpoint: `${host}/${namespace}/sessions`
 });
