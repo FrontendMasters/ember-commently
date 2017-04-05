@@ -1,24 +1,25 @@
----
 language: node_js
 node_js:
-  - "6"
-
+- '6'
 sudo: false
-
 cache:
   directories:
-    - $HOME/.npm
-    - $HOME/.cache # includes bowers cache
-
+  - "$HOME/.npm"
+  - "$HOME/.cache"
 before_install:
-  - npm config set spin false
-  - npm install -g bower phantomjs-prebuilt
-  - bower --version
-  - phantomjs --version
-
+- npm config set spin false
+- npm install -g bower phantomjs-prebuilt
+- bower --version
+- phantomjs --version
 install:
-  - npm install
-  - bower install
-
+- npm install
+- bower install
 script:
-  - npm test
+- npm test
+deploy:
+  provider: heroku
+  api_key:
+    secure: EktOpFOcy1j138Gwbc2gos3dhO1hrgrB5tSZAywu10q6Kz5TmBlmDhX9TzTJL3cYUPvOSZwoLBF2TfpEYywbKturEExetyjIZfM6pmjYocd+3naZMYmFfXsvUQZdrptLrWGHbTwL1+taZAG5VQjyiSd79bMr7eysrn2uUBc3WJGv4lg1rqsBCk3M3zurXSLzjkVH0JQVGTadyhSHBpK5L5Ff9aaKebDOOZrq7J4fmaY2a8tS2RdZgROYZLMOy2c1/LskbA5tttLg+ubP/Ydb0A1zio9gy1LXSxghtkF9ZMmR49sxjlSFT8w5ax/AWKix8/Ww92edxzYhbasQJ2fc2OjLNTkhkFgP9UJj/Vw4ZZIRx5mao3KCZS25gMluEi7+SHC7kA3RS9pnhQFjwZSepjZSzDnenqol0BnD+LQpJdGIrxa2jeQbnK8JTwKh79rGW7n43wyWuCodD3KdX5JvN70WS+vuv6ugzE3eEXrOBFaA5uHBmOtRP8PQ4u9NXRIkocbg2GkEtoTFidIR+U+uWXDvO0LVarWKXRTuemlek88odwlJ5nldwpDqNfdS/0Du27Glk8PYmauqopIga+Dvkxqt8l8FekfAjaSq60vY2qnPZD1ALh68LFbmHbqPhxuANkT/e06aCcnmiOYF+DJrO1VtG/if6JexJZCJn8O9Y4Q=
+  app: fem-commently
+  on:
+    repo: FrontendMasters/ember-commently
