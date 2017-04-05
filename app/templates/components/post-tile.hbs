@@ -4,7 +4,7 @@
   </div>
   <div class="post-tile-content">
       <span class="comment-count">
-        {{model.comments.length}}
+        {{liquid-bind model.comments.length}}
       </span>
       <h3>{{model.title}}</h3>
       {{#if postInfo.draftComment}}
