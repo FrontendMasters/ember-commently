@@ -1,5 +1,5 @@
 import Ember from 'ember';
-import TextFieldMixin from 'commently/mixins/text-field';
+import TextFieldMixin from 'core-ui/mixins/text-field';
 import { module, test } from 'qunit';
 
 const { Object: Obj } = Ember;

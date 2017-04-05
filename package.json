@@ -63,5 +63,10 @@
   "engines": {
     "node": ">= 4"
   },
-  "private": true
+  "private": true,
+  "ember-addon": {
+    "paths": [
+      "lib/core-ui"
+    ]
+  }
 }
