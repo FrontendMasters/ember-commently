@@ -52,13 +52,14 @@ body {
 .posts-left .posts-left-content-pane {}
 
 .posts-left .posts-left-search input {
-    font-size: 1.3rem;
-    width: 100%;
-    border-radius: 5px;
-    background: white;
-    padding: 5px;
-    border: 1px solid #999;
-    height: 40px;
+  color: black;
+  font-size: 1.3rem;
+  width: 100%;
+  border-radius: 5px;
+  background: white;
+  padding: 5px;
+  border: 1px solid #999;
+  height: 40px;
 }
 
 
