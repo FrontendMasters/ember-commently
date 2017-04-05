@@ -1,4 +1,12 @@
+/* globals define:true */
 import { moduleFor, test } from 'ember-qunit';
+
+define('math', [], function() {
+  return {
+    default: Math,
+    PI: Math.PI
+  };
+});
 
 moduleFor('route:application', 'Unit | Route | application', {
   // Specify the other units that are required for this test.
